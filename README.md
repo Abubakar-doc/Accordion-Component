@@ -13,7 +13,8 @@ A simple, reusable React accordion component that displays a list of items. Only
 ---
 
 ## Screenshot
-![image](https://github.com/user-attachments/assets/9366df1c-d254-464a-922b-e1ef0b8b5dd6)
+![Screenshot 2025-01-26 170338](https://github.com/user-attachments/assets/08e35e67-532a-4567-bfa6-e5067bd2cf43)
+
 
 ---
 
