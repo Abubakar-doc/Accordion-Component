@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# React Accordion Component
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple, reusable React accordion component that displays a list of items. Only one accordion item can be open at a time, ensuring a clean and intuitive user experience.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Expand/collapse functionality for FAQ-style sections.
+- Ensures only one item is open at a time.
+- Dynamic rendering based on provided data.
+- Fully customizable via CSS.
+- Accessible with keyboard navigation support (optional improvement).
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Screenshot
+![image](https://github.com/user-attachments/assets/9366df1c-d254-464a-922b-e1ef0b8b5dd6)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Installation and Setup
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Clone the repository:
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/your-username/react-accordion.git
+   cd react-accordion
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   npm install
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the development server:
 
-### `npm run eject`
+   ```bash
+   npm start
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Open the app in your browser at [http://localhost:3000](http://localhost:3000).
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Data Format
+The accordion accepts an array of objects as data. Each object should have the following structure:
+```javascript
+const faqs = [
+  {
+    title: "Accordion Item Title",
+    text: "Accordion item content goes here."
+  },
+  ...
+];
+```
 
-## Learn More
+### Adding the Component
+1. Import and use the `Accordion` component in your React application:
+   ```javascript
+   import Accordion from "./Accordion";
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   const faqs = [
+     {
+       title: "Where are these chairs assembled?",
+       text: "Lorem ipsum dolor sit amet consectetur adipisicing elit."
+     },
+     {
+       title: "How long do I have to return my chair?",
+       text: "Pariatur recusandae dignissimos fuga voluptas unde optio nesciunt."
+     }
+   ];
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   function App() {
+     return <Accordion data={faqs} />;
+   }
 
-### Code Splitting
+   export default App;
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Customize the data, styles, and structure as needed.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Folder Structure
 
-### Making a Progressive Web App
+```
+react-accordion/
+├── src/
+│   ├── App.js             // Main app component
+│   ├── Accordion.js       // Accordion and AccordionItem components
+│   ├── index.js           // Entry point
+│   ├── styles.css         // Styles for the accordion
+├── public/
+│   ├── index.html         // HTML template
+├── package.json           // Project dependencies and scripts
+├── README.md              // Project documentation
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
